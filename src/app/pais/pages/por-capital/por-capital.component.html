@@ -1,3 +1,12 @@
 <h2>Por Capital</h2>
 
 <hr>
+
+
+<app-pais-input (onEnter)="buscar($event)" (onDebounce)="sugerenia($event)" placeHolder="Buscar Capital..."></app-pais-input>
+
+<hr>
+
+<p class="alert" *ngIf="hayError">No se encontro nada con el término {{termino}}</p>
+
+<app-table *ngIf="capitales.length" [paisestabla]="capitales"></app-table>

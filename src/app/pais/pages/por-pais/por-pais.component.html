@@ -3,34 +3,10 @@
 <hr>
 
 
-<form action="" (ngSubmit)="buscar()">
-    <input type="text" name="termino" placeholder="Buscar país..." autocomplete="false"  [(ngModel)]="termino">
-</form>
+<app-pais-input (onEnter)="buscar($event)" (onDebounce)="sugerenia($event)"></app-pais-input>
 
 <hr>
 
 <p class="alert" *ngIf="hayError">No se encontro nada con el término {{termino}}</p>
 
-
-<table *ngIf="!hayError && paises.length">  
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Bandera</th>
-            <th>Nombre</th>
-            <th>Población</th>
-            <th></th>
-        </tr>
-    </thead>
-
-    <tbody>
-        <tr *ngFor="let pais of paises; let i=index">
-            <td>{{i+1}}</td>
-            <td><img [src]="pais.flag" alt="No hay imagen"></td>
-            <td>{{pais.name}}</td>
-            <td>{{pais.population | number}}</td>
-            <td><a [routerLink]="['/pais',pais.alpha2Code]" >ver..</a></td>
-        </tr>
-    </tbody>
-
-</table>
+<app-table *ngIf="paises.length" [paisestabla]="paises"></app-table>

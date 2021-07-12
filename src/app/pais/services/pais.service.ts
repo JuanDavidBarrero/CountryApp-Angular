@@ -18,4 +18,14 @@ export class PaisService {
     return this.http.get<Country[]>(url);
   }
 
+  burcarCapital(termino:String):Observable<Country[]>{
+    const url = `${this.apiUrl}/capital/${termino}`;
+    return this.http.get<Country[]>(url);
+  }
+
+  getPaisporAlpha(id:string):Observable<Country>{
+    const url = `${this.apiUrl}/alpha/${id}`;
+    return this.http.get<Country>(url);
+  }
+
 }
