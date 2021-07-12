@@ -1,1 +1,102 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --sidebarWidth:200px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar{
+    width: var(--sidebarWidth);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    padding: 10px;
+    z-index: 100;
+}
+
+.sidebar h2{
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.sidebar ul{
+    padding: 10px;
+    text-align: left;
+    list-style: none;
+}
+
+.sidebar ul li{
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding:8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.sidebar ul li.active{
+    background-color: #2a5dbb;
+    border: 1px solid #2a5dbb;
+    cursor: pointer;
+    color: #fff;
+}
+
+.container{
+    padding: 10px;
+    margin-left: var(--sidebarWidth);
+}
+
+.container h2{
+    margin-bottom: 5px;
+}
+
+input{
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.alert{
+    margin-top: 10px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #e0b2b2b9;
+    color: #851717;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+ td,th {
+    border-bottom: 1px solid #a3a3a3;
+    padding: 5px;
+  }
+  
+  
+tbody tr:hover {background-color: #ddd;}
+  
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+  }  
+
+img {
+    width: 50px;
+}
