@@ -1,2 +1,12 @@
-<h2> Por Region</h2>
+<h2> Buscar por regiones <small>{{regionActiva | titlecase}}</small> </h2>
 <hr>
+
+<h5>Selectione la region</h5>
+
+<div class="row">
+    <button *ngFor="let region of regiones" (click)="activarRegion(region)"
+        [class.activa]="region == regionActiva">{{region}}</button>
+</div>
+
+
+<app-table  *ngIf="paises.length" [paisestabla]="paises" ></app-table>

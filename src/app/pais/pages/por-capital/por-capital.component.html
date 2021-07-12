@@ -9,4 +9,4 @@
 
 <p class="alert" *ngIf="hayError">No se encontro nada con el término {{termino}}</p>
 
-<app-table *ngIf="capitales.length" [paisestabla]="capitales"></app-table>
+<app-table *ngIf="capitales.length && !hayError" [paisestabla]="capitales"></app-table>

@@ -153,10 +153,39 @@ img {
 }
 
 .col ul li {
-    width: 300px;
+    min-width:200px;
     padding: 5px;
     border-radius: 10px;
     border: 2px solid gray;
     margin: 2px;
 }
 
+h5{
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+button{
+    border-radius: 5px;
+    border: 1px solid #2a5dbb;
+    color: #2a5dbb;
+    background-color: white;
+    padding: 5px 20px;
+    cursor: pointer;
+}
+
+button.activa{
+    background-color: #2a5dbb;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: #2a5dbb;
+    color: white;
+}
+
+button:focus{
+    outline: none;
+}
